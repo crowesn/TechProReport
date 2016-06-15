@@ -28,7 +28,7 @@ def sendMail(x):
 		print "Sendmail exit status", status
 
 def submit_query(SessionUser, SessionPass, Recipient1):
-	query = os.popen("PGPASSWORD={1} /UCUsers/Users/c/crowesn/eresources/pgsq/bin/psql -A -H -U {0} -h sierra-db.libraries.uc.edu -p 1032 -d iii -f /UCUsers/Users/c/crowesn/eresources/pgsq/scripts/TechProReport.psql 2>&1 | mail -s \"TechPro Report\nContent-Type:text/html\" {2}, sean.crowe@uc.edu".format(SessionUser, SessionPass, Recipient1))
+	query = os.popen("PGPASSWORD={1} /UCUsers/Users/c/crowesn/eresources/pgsq/bin/psql -A -H -U {0} -h 10.40.2.228 -p 1032 -d iii -f /UCUsers/Users/c/crowesn/eresources/pgsq/scripts/TechProReport.psql 2>&1 | mail -s \"TechPro Report\nContent-Type:text/html\" {2}, sean.crowe@uc.edu".format(SessionUser, SessionPass, Recipient1))
 try:
 	#connect to host and login
 
